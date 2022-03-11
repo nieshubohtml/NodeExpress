@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2022-03-10 15:50:07
- * @LastEditTime: 2022-03-10 18:18:28
+ * @LastEditTime: 2022-03-11 16:33:59
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: \前端项目test\newNode\node\redme.md
@@ -50,3 +50,34 @@ app.post('/api/users', jsonParser, function (req, res) {
   // create user in req.body
 })
 
+### exprees.Router
+
+使用Rouetr对api进行封装
+
+### 中间件 middlewear
+
+  + 内置中间件 static 
+  + 自定义中间件
+  + 第三方中间件 （body-parser） (拦截器)
+
+  需要在合适的地方执行next()，进行下一步
+
+  可以分为局部中间件（写在app.get('/s',func（内置中间件）,func)）
+  和全局中间件(app.user('',func))
+
+# 静态资源中间件 static 
+
+
+### promiss
+ 
+promiss是为了解决回调地狱，通过.then的方法链式调用，其中链式调用中不管那一步出错，都可以用catch来捕获错误
+
+### 手动终止链式调用执行
+
+  throw new Eroor('手动终止')//抛出错误
+
+
+### node操作mongodb数据库
+
++ mongod
++ mongoose
